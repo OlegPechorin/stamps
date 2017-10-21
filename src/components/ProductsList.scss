@@ -1,0 +1,16 @@
+.products-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 900px;
+
+    &__item {
+        width: 32%;
+        margin-bottom: 2%;
+
+        &:not(:last-child) {
+            margin-right: 2%;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.store {
+    display: flex;
+    margin: 40px 0;
+
+    &__controls-block {
+        width: 260px;
+    }
+
+    &__catalogs-block {
+        width: 900px;
+    }
+}

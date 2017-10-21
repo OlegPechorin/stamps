@@ -1,0 +1,31 @@
+.catalog-controls {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 20px);
+    border-right: 1px solid #d9d9d9;
+    height: calc(100% - 20px);
+
+    &__button {
+        display: block;
+        width: calc(100%);
+        transition: background .1s ease;
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 4px 0 0 4px;
+        line-height: 19px;
+        font-size: 16px;
+        outline: none!important;
+        border: 1px solid transparent;
+        color: #000;
+        font-weight: bold;
+
+        &--active {
+            position: relative;
+            right: -1px;
+            border: 1px solid #d9d9d9;
+            border-right-color: #fff;
+            padding-right: 22px;
+        }
+    }
+}
