@@ -1,38 +1,33 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-
+import './CatalogControls.scss'
 import {catalogs} from '../fixtures'
 
-import './CatalogControls.scss'
+function CatalogControls({toggleTab, openTabNumber}) {
+  const buttonClass = 'catalog-controls__button'
+  const buttonActiveClass = buttonClass + ' catalog-controls__button--active'
 
-class CatalogControls extends Component {
-  static propTypres = {
-    toggleOpen: PropTypes.func.isRequired,
-    openCatalogId: PropTypes.number.isRequired
-  }
-
-  render() {
-    const buttonClass = 'catalog-controls__button'
-    const buttonActiveClass = buttonClass + ' catalog-controls__button--active'
-    const {isOpen, toggleOpen, openCatalogId} = this.props
-
-    const catalogControls = catalogs.map((catalog, i) => {
-      return (
-        <li key={catalog.id} className="catalog-controls__item">
-          <button
-            className={openCatalogId === i ? buttonActiveClass : buttonClass}
-            onClick={toggleOpen.bind(this, i)}
-          >{catalog.title}</button>
-        </li>
-      )
-    })
-
+  const catalogControls = catalogs.map((catalog, i) => {
     return (
-      <ul className="catalog-controls">
-        {catalogControls}
-      </ul>
+      <li key={catalog.id} className="catalog-controls__item">
+        <button
+          className={openTabNumber === i ? buttonActiveClass : buttonClass}
+          onClick={toggleTab.bind(this, i)}
+        >{catalog.title}</button>
+      </li>
     )
-  }
+  })
+
+  return (
+    <ul className="catalog-controls">
+      {catalogControls}
+    </ul>
+  )
+}
+
+CatalogControls.propTypres = {
+  toggleTab: PropTypes.func.isRequired,
+  openTabNumber: PropTypes.number.isRequired
 }
 
 export default CatalogControls

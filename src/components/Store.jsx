@@ -1,34 +1,30 @@
 import React, {Component} from 'react'
 import CatalogControls from './CatalogControls'
 import ProductsList from './ProductsList'
+import toggleTabs from '../decorators/toggleTabs'
+import PropTypes from 'prop-types'
 import './Store.scss'
 import {catalogs} from '../fixtures'
 
-class Store extends Component {
-  state = {
-    openCatalogId: 0
-  }
-
-  render() {
-
-    return (
-      <div className="store">
-        <div className="store__controls-block">
-          <CatalogControls
-            toggleOpen={this.toggleOpenCatalog}
-            openCatalogId={this.state.openCatalogId}
-          />
-        </div>
-        <div className="store__catalog-block">
-          <ProductsList products={catalogs[this.state.openCatalogId].products} />
-        </div>
+function Store({toggleTab, openTabNumber}) {
+  return (
+    <div className="store">
+      <div className="store__controls-block">
+        <CatalogControls
+          toggleTab={toggleTab}
+          openTabNumber={openTabNumber}
+        />
       </div>
-    )
-  }
-
-  toggleOpenCatalog = (openCatalogId) => {
-    this.setState({openCatalogId})
-  }
+      <div className="store__catalog-block">
+        <ProductsList products={catalogs[openTabNumber].products} />
+      </div>
+    </div>
+  )
 }
 
-export default Store
+Store.propTypres = {
+  toggleTab: PropTypes.func.isRequired,
+  openTabNumber: PropTypes.number.isRequired
+}
+
+export default toggleTabs(Store)

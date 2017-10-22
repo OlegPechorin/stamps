@@ -1,5 +1,6 @@
 .products-list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@
         width: 32%;
         margin-bottom: 2%;
 
-        &:not(:last-child) {
+        &:not(:nth-child(3n)) {
             margin-right: 2%;
         }
     }
