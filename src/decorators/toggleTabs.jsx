@@ -14,10 +14,8 @@ export default (OriginalComponent) => class toggleTabs extends ReactComponent {
     )
   }
 
-  toggleTab = (tabNumber, event) => { // stage-0 syntax
+  toggleTab = (openTabNumber, event) => { // stage-0 syntax
     event && event.preventDefault && event.preventDefault()
-    this.setState({
-      openTabNumber: this.state.openTabNumber !== tabNumber ? tabNumber : null
-    })
+    this.state.openTabNumber !== openTabNumber ? this.setState({openTabNumber}) : null
   }
 }

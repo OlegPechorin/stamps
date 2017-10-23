@@ -9,7 +9,9 @@ class Product extends Component {
       title: PropTypes.string.isRequired,
       img: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    toggleOpen: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired
   }
 
   render() {
@@ -18,7 +20,7 @@ class Product extends Component {
     return (
       <article className="product" ref={this.setContainerRef}>
         <div className="product__img-wrapper">
-          <img src={product.img} alt={product.title} className="product__img"/>
+          <img alt={product.title} className="product__img"/>
         </div>
         <div className="product__title">{product.title}</div>
         <div className="product__more" onClick = {toggleOpen}>
@@ -31,10 +33,10 @@ class Product extends Component {
     )
   }
 
-  setContainerRef = ref => {
-    this.container = ref
-    console.log(ref)
-  }
+  // setContainerRef = ref => {
+  //   this.container = ref
+  //   console.log(ref)
+  // }
 
   getDescription() {
     const {product, isOpen} = this.props
