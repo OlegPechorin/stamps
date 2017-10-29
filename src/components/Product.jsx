@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import toggleOpen from '../decorators/toggleOpen'
 import './Product.scss'
 
+import {connect} from 'react-redux'
+import {toggleDialog} from '../AC'
+
 class Product extends Component {
   static propTypes = {
     product: PropTypes.shape({
@@ -11,11 +14,12 @@ class Product extends Component {
       price: PropTypes.string.isRequired
     }).isRequired,
     toggleOpen: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    toggleDialog: PropTypes.func.isRequired
   }
 
   render() {
-    const {product, isOpen, toggleOpen} = this.props
+    const {product, isOpen, toggleOpen, toggleDialog} = this.props
 
     return (
       <article className="product" ref={this.setContainerRef}>
@@ -28,15 +32,10 @@ class Product extends Component {
         </div>
         {this.getDescription()}
         <div className="product__price">{product.price}</div>
-        <button className="product__button">Заказать</button>
+        <button className="product__button" onClick={toggleDialog}>Заказать</button>
       </article>
     )
   }
-
-  // setContainerRef = ref => {
-  //   this.container = ref
-  //   console.log(ref)
-  // }
 
   getDescription() {
     const {product, isOpen} = this.props
@@ -45,4 +44,4 @@ class Product extends Component {
   }
 }
 
-export default toggleOpen(Product)
+export default connect(({dialogIsOpen}) => ({dialogIsOpen}), {toggleDialog})(toggleOpen(Product))

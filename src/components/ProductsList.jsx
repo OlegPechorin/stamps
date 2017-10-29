@@ -3,8 +3,15 @@ import PropTypes from 'prop-types'
 import Product from './Product'
 import './ProductsList.scss'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {connect} from 'react-redux'
 
-function ProductsList({products, openTabNumber}) {
+function ProductsList({currentCatalog, products}) {
+  products = products.filter((product) => {
+    return currentCatalog.products.some((productId) => {
+      return product.id === productId
+    })
+  })
+
   const productElements = products.map((product) => {
     return (
       <li key={product.id} className="products-list__item">
@@ -19,7 +26,7 @@ function ProductsList({products, openTabNumber}) {
       transitionEnterTimeout={800}
       transitionLeaveTimeout={100}
     >
-      <ul key={openTabNumber} className="products-list">
+      <ul key={currentCatalog.id} className="products-list">
         {productElements}
       </ul>
     </ReactCSSTransitionGroup>
@@ -27,7 +34,10 @@ function ProductsList({products, openTabNumber}) {
 }
 
 ProductsList.propTypres = {
+  currentCatalog: PropTypes.object.isRequired,
   products: PropTypes.array.isRequired
 }
 
-export default ProductsList
+export default connect(({currentCatalog, products}) => ({
+  currentCatalog, products
+}))(ProductsList)
