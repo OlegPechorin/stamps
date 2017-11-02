@@ -1,0 +1,57 @@
+.production-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 110px;
+
+    &__title {
+        color: $dark-gray;
+        margin-bottom: 60px;
+        @include font(700, 32px, 1);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 1280px;
+        padding: 0 130px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__icon {
+        height: 64px;
+        width: 84px;
+        margin-bottom: 35px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        &--delivery {
+            background-image: url(../img/delivery.png);
+        }
+
+        &--layouts {
+            background-image: url(../img/layouts.png);
+        }
+
+        &--consultation {
+            background-image: url(../img/consultation.png);
+        }
+
+    }
+
+    &__name {
+        color: $dark-gray;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include font(900, 16px, 24px);
+    }
+
+    &__text {
+        color: $dark-gray;
+        @include font(300, 18px, 28px);
+    }
+}

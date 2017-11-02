@@ -1,18 +1,33 @@
 export const catalogs = [
   {
     "id": "1",
-    "title": "Автоматические",
-    "products": ["jsud", "ks8s", "nd7g", "93jd", "nshf"]
+    "title": "Автоматические пучати",
+    "products": ["jsud", "ks8s", "nd7g", "93jd", "nshf"],
+    "imgName": "automatic.png"
   },
   {
     "id": "2",
-    "title": "Полу­автоматические",
-    "products": ["ld8g" , "2t5g", "ldns"]
+    "title": "Полу­автоматические пучати",
+    "products": ["ld8g" , "2t5g", "ldns"],
+    "imgName": "semi-automatic.png"
   },
   {
     "id": "3",
     "title": "Карманные и ручные печати",
-    "products": ["ldns", "8j3m"]
+    "products": ["ldns", "8j3m"],
+    "imgName": "pocket.png"
+  },
+  {
+    "id": "4",
+    "title": "Штампы",
+    "products": ["ldns", "8j3m"],
+    "imgName": "stamps.png"
+  },
+  {
+    "id": "5",
+    "title": "Расходные материалы и аксессуары",
+    "products": ["ldns", "8j3m"],
+    "imgName": "accessories.png"
   }
 ]
 
@@ -81,3 +96,58 @@ export const products = [
     "price": "1200"
   }
 ]
+
+export const logo = {
+  src: './img/logo.png',
+  text: 'Печати'
+}
+
+export const headerLinks = [
+  {
+    href: '#production',
+    text: 'Продукция'
+  },
+  {
+    href: '#sketches',
+    text: 'Эскизы'
+  },
+  {
+    href: '#delivery',
+    text: 'Доставка и оплата'
+  },
+  {
+    href: '#contacts',
+    text: 'Контакты'
+  },
+  {
+    href: '#ecp',
+    text: 'Заказать ЭЦП'
+  }
+]
+
+export const callbackData = {
+  phoneNumber: '+7 (925) 350-54-56',
+  phoneNumberSrc: '79253505456',
+  text: 'Перезвоните мне'
+}
+
+export const firstScreenData = {
+  titleBold: 'Печати и штампы',
+  title: 'в Москве за 1 час',
+  stockLabel: 'Акция',
+  stockText: 'При оплате заказа онлайн',
+  stockTextBold: 'Бесплатная доставка',
+  formTitle: 'Оставьте заявку сейчас',
+  formTextOne: 'и получите',
+  formTextTwo: 'печать за 1 рубль!',
+  formButtonText: 'Оставить заявку'
+}
+
+export const productionConceptData = {
+  title: 'Мы не просто продаем печати, мы предоставляем сервис!',
+  imgName: 'concept-about.png',
+  imgAlt: 'concept-photo',
+  text: 'Для своих клиентов мы стремимся предоставить лучший сервис на российском рынке производства печатей и штампов — от самого информативного удобного сайта, до слаженной и грамотной работы наших менеджеров офиса и сотрудников производства.',
+  text2: 'Если у Вас есть вопросы Вы можете позвонить нам 7 дней в неделю с 9.00 до 21.00.',
+  textBold: 'Мы с радостью ответим на любые Ваши вопросы!'
+}

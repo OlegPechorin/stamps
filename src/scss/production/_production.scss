@@ -1,0 +1,10 @@
+@import './production-list';
+@import './production-concept';
+@import './production-features';
+
+.production {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

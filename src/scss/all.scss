@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+// body {
+//     font-family: 'Arial', sans-serif;
+// }
+
+.MuseoSansCyrl-loaded body {
+    font-family: 'MuseoSansCyrl', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+@import './template';
+@import './first-screen/first-screen';
+@import './production/production';
+@import './form-block/form-block';
+@import './catalog/catalog';

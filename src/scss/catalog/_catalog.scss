@@ -1,6 +1,10 @@
+@import './catalog-controls';
+@import './products-list';
+@import './product';
+
 .catalog {
     display: flex;
-    margin: 40px 0;
+    margin: 400px 0 40px;
 
     &__controls-block {
         width: 260px;

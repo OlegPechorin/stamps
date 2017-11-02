@@ -1,0 +1,57 @@
+.production-concept {
+    width: 1280px;
+    padding: 240px 130px 0;
+    margin-bottom: 110px;
+
+    &__title {
+        color: $dark-gray;
+        width: 840px;
+        line-height: 68px;
+        margin-bottom: 75px;
+        @include font(100, 58px, 1);
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 490px;
+        @include font(300, 18px, 28px);
+    }
+
+    &__item {
+
+        &--with-line {
+            padding-bottom: 36px;
+            position: relative;
+            left: 0;
+
+            &::after {
+                content: '';
+                height: 2px;
+                width: 40px;
+                background: $orange;
+                position: absolute;
+                left: 0;
+                bottom: 18px;
+            }
+        }
+
+        &--bold {
+            @include font(700, 18px, 28px);
+            margin-top: 10px;
+        }
+
+    }
+
+    &__photo{
+        width: 440px;
+        height: 280px;
+    }
+}

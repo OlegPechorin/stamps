@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import './CatalogControls.scss'
 import {connect} from 'react-redux'
 import {toggleCatalog} from '../AC'
 
