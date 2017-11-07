@@ -1,0 +1,260 @@
+.faq {
+    padding: 115px 130px 45px;
+
+    @include tablet-desktop {
+        padding: 95px 105px 35px;
+    }
+
+    @include mobile {
+        padding: 30px 0;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+
+        &--furniture {
+            margin-bottom: 110px;
+
+            @include tablet {
+                margin-bottom: 60px;
+            }
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__title {
+        color: $dark-gray;
+        @include font(700, 32px, 1);
+        margin-bottom: 60px;
+        text-align: center;
+
+        @include tablet-desktop {
+            font-size: 26px;
+        }
+
+        @include mobile {
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__furniture-variation {
+        display: flex;
+        width: 100%;
+
+        @include mobile-tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__variation-item {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+
+        @include mobile-tablet {
+            margin: 0 0 50px;
+        }
+
+        @include mobile {
+            margin: 0 0 30px;
+        }
+    }
+
+    &__variation-title {
+        color: $light-orange;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        @include font(900, 16px, 26px);
+
+        @include tablet-desktop {
+            @include font(900, 14px, 24px);
+        }
+
+        @include mobile {
+            @include font(900, 14px, 24px);
+        }
+    }
+
+    &__variation-text {
+        color: $dark-gray;
+        @include font(300, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(300, 14px, 24px);
+        }
+
+        @include mobile {
+            @include font(300, 14px, 24px);
+        }
+    }
+
+    &__variation-text-bold {
+        @include font(700, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(700, 14px, 24px);
+        }
+
+        @include mobile {
+            @include font(700, 14px, 24px);
+        }
+    }
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+
+    @include mobile-tablet {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    &--mobile-m20 {
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+        margin-top: 10px;
+
+        @include tablet-desktop {
+            width: 390px;
+        }
+
+        @include mobile-tablet {
+            width: 100%;
+            order: 0;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &--furniture {
+            width: 470px;
+
+            @include tablet-desktop {
+                width: 410px;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &__about-title {
+        color: $light-orange;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        @include font(700, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(700, 16px, 24px);
+            margin-bottom: 16px;
+        }
+
+        @include mobile {
+            @include font(700, 14px, 24px);
+        }
+    }
+
+    &__about-text {
+        color: $dark-gray;
+        @include font(300, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(300, 14px, 24px);
+        }
+
+        @include mobile-tablet {
+            margin-bottom: 30px;
+            @include font(300, 14px, 24px);
+        }
+
+        &--part {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__about-item {
+        color: $dark-gray;
+        margin-bottom: 5px;
+        @include font(700, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(700, 16px, 24px);
+        }
+
+        @include mobile {
+            @include font(700, 14px, 24px);
+        }
+
+        &--shiny {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__photo-wrapper {
+        @include mobile-tablet {
+            order: 1;
+        }
+    }
+
+    &__photo {
+        width: 430px;
+        height: 320px;
+        margin-bottom: 15px;
+
+        @include tablet-desktop {
+            width: 350px;
+            height: 240px;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+        }
+
+        &--furniture {
+            width: 450px;
+            height: 300px;
+
+            @include desktop {
+                width: 350px;
+                height: 240px;
+            }
+
+            @include mobile-tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__photo-sign {
+        color: $dark-gray;
+        @include font(700, 14px, 1);
+
+        @include tablet-desktop {
+            @include font(700, 12px, 18px);
+        }
+
+        @include mobile {
+            @include font(700, 12px, 18px);
+        }
+    }
+}

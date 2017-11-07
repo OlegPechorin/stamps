@@ -20,6 +20,7 @@ function FormBlock({FormBlockData}) {
           <input type="submit" className="form-block__form-button" value="Заказать восстановление" />
         </form>
       </div>
+      <div className="form-block__stamp-bg"></div>
     </section>
   )
 }

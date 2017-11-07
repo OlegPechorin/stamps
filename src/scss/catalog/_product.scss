@@ -1,33 +1,42 @@
 .product {
     position: relative;
-    padding: 20px;
-    border: 1px solid #d9d9d9;
-    border-radius: 6px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 3px 25px rgba(0,0,0,0.1);
+        border-radius: 6px;
+    }
 
     &__img-wrapper {
-        width: 248px;
-        height: 248px;
+        width: 200px;
+        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    &__title {
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 10px auto;
+    &__img {
         text-align: center;
-        height: 36px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin: 10px auto 0;
+        text-align: center;
+        @include font(500, 16px, 22px);
     }
 
     &__more {
         text-decoration: underline;
         cursor: pointer;
+        margin: 0 0 10px;
+        @include font(500, 14px, 24px);
+        color: $light-gray;
     }
 
     &__description {
@@ -39,29 +48,42 @@
         background: #fff;
         padding: 10px;
         top: 350px;
+        color: $dark-gray;
+        @include font(900, 13px, 24px);
+    }
+
+    &__button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
     }
 
     &__price {
-        font-weight: bold;
-        margin: 15px auto;
+        margin: 15px 0;
+        color: $dark-gray;
+        @include font(900, 18px, 24px);
 
         &::after {
             content: '₽';
             margin-left: 4px;
+            @include font(500, 16px, 24px);
         }
     }
 
     &__button {
         display: block;
-        width: calc(100%);
+        width: calc(60%);
         transition: background .1s ease;
-        padding: 15px 20px;
-        background-color: #20a052;
-        border-radius: 4px;
-        line-height: 19px;
-        font-size: 16px;
+        height: 40px;
+        padding: 2px 20px 0;
+        background-color: $orange2;
+        border-radius: 20px;
         outline: none!important;
         border: none;
-        color: #fff;
+        color: $white;
+        text-transform: uppercase;
+        @include font(900, 13px, 24px);
     }
 }

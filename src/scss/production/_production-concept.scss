@@ -1,7 +1,22 @@
 .production-concept {
-    width: 1280px;
+    width: 100%;
     padding: 240px 130px 0;
     margin-bottom: 110px;
+
+    @include desktop {
+        padding: 210px 105px 0;
+        margin-bottom: 90px;
+    }
+
+    @include tablet {
+        padding: 170px 0 0;
+        margin-bottom: 90px;
+    }
+
+    @include mobile {
+        padding: 380px 0 0;
+        margin-bottom: 50px;
+    }
 
     &__title {
         color: $dark-gray;
@@ -9,6 +24,21 @@
         line-height: 68px;
         margin-bottom: 75px;
         @include font(100, 58px, 1);
+
+        @include tablet-desktop {
+            font-size: 46px;
+            margin-bottom: 60px;
+        }
+
+        @include mobile-tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
     }
 
     &__about {
@@ -18,14 +48,29 @@
         align-items: center;
     }
 
-    &__text {
+    &__text-block {
         display: flex;
         flex-direction: column;
         width: 490px;
         @include font(300, 18px, 28px);
+
+        @include desktop {
+            font-size: 14px;
+            width: 390px;
+        }
+
+        @include mobile-tablet {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
-    &__item {
+    &__text {
 
         &--with-line {
             padding-bottom: 36px;
@@ -40,18 +85,30 @@
                 position: absolute;
                 left: 0;
                 bottom: 18px;
+
+                @include mobile {
+                    left: calc(50% - 20px);
+                }
             }
         }
 
         &--bold {
-            @include font(700, 18px, 28px);
+            font-weight: 700;
             margin-top: 10px;
         }
 
     }
 
-    &__photo{
+    &__photo {
         width: 440px;
         height: 280px;
+
+        @include desktop {
+            width: 350px;
+        }
+
+        @include mobile-tablet {
+            display: none;
+        }
     }
 }

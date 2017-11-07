@@ -14,12 +14,20 @@ class Catalog extends Component {
     const {catalogs, toggleTab, openTabNumber} = this.props
 
     return (
-      <div className="catalog x-catalog" ref="catalog">
+      <div className="catalog x-catalog">
+        <div className="catalog__title">Выберите подходящую оснастку</div>
         <div className="catalog__controls-block">
           <CatalogControls />
         </div>
-        <div className="catalog__catalog-block">
+        <div className="catalog__catalogs-block">
           <ProductsList />
+        </div>
+        <div className="catalog__low-price container">
+          <div className="catalog__low-price-title">Нашли дешевле?</div>
+          <div className="catalog__low-price-text">
+            Мы сделаем цену ниже еще
+            <span className="catalog__low-price-text-bold"> на 5%</span>
+          </div>
         </div>
       </div>
     )

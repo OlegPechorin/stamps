@@ -3,8 +3,12 @@ import Header from './Header'
 import FirstScreen from './FirstScreen'
 import Production from './Production'
 import FormBlock from './FormBlock'
+import QualityBlock from './QualityBlock'
 import Catalog from './Catalog'
 import FormDialog from './FormDialog'
+import FAQSection from './FAQSection'
+import DeliverySection from './DeliverySection'
+import Feedback from './Feedback'
 import '../scss/all.scss'
 import Counter from './Counter'
 import {Provider} from 'react-redux'
@@ -18,9 +22,13 @@ function App() {
         <FirstScreen />
         <Production />
         <FormBlock />
+        <QualityBlock />
         <Catalog />
-        <FormDialog />
-        <Counter />
+        <FormBlock />
+        <FAQSection />
+        <DeliverySection />
+        <Feedback />
+
       </div>
     </Provider>
   )

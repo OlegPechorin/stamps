@@ -20,15 +20,17 @@ class CatalogControls extends Component {
           <button
             className={currentCatalog.id === catalog.id ? buttonActiveClass : buttonClass}
             onClick={this.handleCatalog.bind(this, catalog.id)}
-          >{catalog.title}</button>
+          >{catalog.titleShort}</button>
         </li>
       )
     })
 
     return (
-      <ul className="catalog-controls">
-        {catalogControls}
-      </ul>
+      <div className="catalog-controls-wrapper">
+        <ul className="catalog-controls container">
+          {catalogControls}
+        </ul>
+      </div>
     )
   }
 

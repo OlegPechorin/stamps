@@ -1,0 +1,247 @@
+.feedback {
+    background: $gradient;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        padding: 125px 130px 55px;
+        justify-content: space-between;
+
+        @include tablet-desktop {
+            padding: 100px 100px 40px;
+        }
+
+        @include mobile-tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 60px 100px 40px;
+        }
+
+        @include mobile {
+            padding: 40px 0;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text-title {
+        color: $white;
+        margin-bottom: 10px;
+        @include font(900, 67px, 1);
+
+        @include tablet-desktop {
+            @include font(900, 46px, 1);
+        }
+
+        @include mobile-tablet {
+            text-align: center;
+        }
+
+        @include mobile {
+            font-size: 30px;
+        }
+
+        &--light {
+            margin-bottom: 65px;
+            @include font(300, 67px, 1);
+
+            @include tablet-desktop {
+                @include font(300, 46px, 1);
+            }
+
+            @include mobile-tablet {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            @include mobile {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__text-item {
+        color: $white;
+        width: 360px;
+        margin-left: 185px;
+        @include font(500, 24px, 36px);
+
+        @include tablet-desktop {
+            @include font(500, 19px, 24px);
+        }
+
+        @include desktop {
+            width: 290px;
+            margin-left: 150px;
+        }
+
+        @include mobile-tablet {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__form-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form {
+        width: 400px;
+        background: $white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        margin-bottom: 25px;
+
+        @include tablet-desktop {
+            width: 320px;
+            padding: 35px 30px;
+        }
+
+        @include tablet {
+            height: auto;
+        }
+
+        @include mobile {
+            width: 300px;
+            padding: 25px 20px;
+            height: auto;
+        }
+    }
+
+    &__form-title {
+        color: $dark-gray;
+        margin-bottom: 10px;
+        @include font(300, 28px, 1);
+
+        @include tablet-desktop {
+            font-size: 22px;
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__form-item {
+        color: $dark-gray;
+        text-align: center;
+        margin-bottom: 25px;
+        @include font(500, 17px, 24px);
+
+        @include tablet-desktop {
+            font-size: 14px;
+        }
+
+        @include mobile {
+            @include font(500, 12px, 18px);
+            margin: 0;
+        }
+
+        &--bold {
+            text-transform: uppercase;
+            @include font(900, 17px, 30px);
+
+            @include tablet-desktop {
+                @include font(900, 14px, 24px);
+            }
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__form-input {
+        background: $white;
+        text-align: left;
+        margin-bottom: 20px;
+        padding: 0 30px;
+        width: 320px;
+        height: 60px;
+        border: 1px solid $light-gray;
+        border-radius: 6px;
+        outline: none;
+        @include font(300, 18px, 1);
+
+        @include tablet-desktop {
+            width: 260px;
+            height: 48px;
+            margin: 16px 0 0;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 40px;
+            margin: 16px 0 0;
+            font-size: 12px;
+        }
+
+        &--comment {
+            margin-bottom: 40px;
+
+            @include tablet-desktop {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__form-button {
+        border-radius: 100px;
+        border: none;
+        background: $black;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        width: 320px;
+        height: 70px;
+        outline: none;
+        @include font(900, 16px, 1);
+
+        @include tablet-desktop {
+            width: 260px;
+            height: 56px;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 56px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+    }
+
+    &__form-sign {
+        text-align: center;
+        color: $dark-gray;
+        width: 400px;
+        @include font(500, 16px, 24px);
+
+        @include tablet-desktop {
+            @include font(500, 14px, 1);
+            width: 320px;
+            padding: 0 10px;
+        }
+
+        @include mobile {
+            width: 300px;
+        }
+    }
+}

@@ -3,23 +3,61 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 110px;
+    width: 100%;
+
+    @include mobile {
+        margin-bottom: 70px;
+    }
 
     &__title {
         color: $dark-gray;
         margin-bottom: 60px;
         @include font(700, 32px, 1);
+
+        @include tablet-desktop {
+            font-size: 26px;
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
-        width: 1280px;
         padding: 0 130px;
+        width: 100%;
+
+        @include desktop {
+            padding: 0 105px;
+        }
+
+        @include mobile-tablet {
+            padding: 0;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
+
+        @include mobile {
+            align-items: center;
+        }
+
+        &:not(:last-child) {
+            @include mobile {
+                margin-bottom: 60px;
+            }
+        }
     }
 
     &__icon {
@@ -41,6 +79,12 @@
             background-image: url(../img/consultation.png);
         }
 
+        @include mobile {
+            height: 47px;
+            width: 53px;
+            background-size: contain;
+            background-position: center;
+        }
     }
 
     &__name {
@@ -48,10 +92,28 @@
         text-transform: uppercase;
         margin-bottom: 20px;
         @include font(900, 16px, 24px);
+
+        @include tablet-desktop {
+            font-size: 14px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
     }
 
     &__text {
         color: $dark-gray;
         @include font(300, 18px, 28px);
+
+        @include tablet-desktop {
+            font-size: 14px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
     }
 }

@@ -26,12 +26,16 @@ function FirstScreen({firstScreenData}) {
           <form className="first-screen__form">
             <div className="first-screen__form-title">{firstScreenData.formTitle}</div>
             <div className="first-screen__form-item">
-              <div className="first-screen__form-item--one">{firstScreenData.formTextOne}</div>
-              <div className="first-screen__form-item--two">{firstScreenData.formTextTwo}</div>
+              {firstScreenData.formTextOne}
+              <span className="first-screen__form-item--bold">{firstScreenData.formTextTwo}</span>
             </div>
             <input className="first-screen__form-input" type="text" id="name" placeholder="Ваше имя" />
             <input className="first-screen__form-input" type="tel" id="call-number" placeholder="+7 (___) ___-__-__" />
             <input type="submit" className="first-screen__form-button" value={firstScreenData.formButtonText} />
+            <div className="first-screen__stock-text-wrapper first-screen__stock-text-wrapper--tablet">
+              <div className="first-screen__stock-title">{firstScreenData.stockText}</div>
+              <div className="first-screen__stock-title first-screen__stock-title--free">{firstScreenData.stockTextBold}</div>
+            </div>
           </form>
         </div>
       </div>

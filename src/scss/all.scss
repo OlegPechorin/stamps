@@ -1,10 +1,17 @@
+@import './template';
+@import './first-screen/first-screen';
+@import './production/production';
+@import './form-block/form-block';
+@import './quality-block/quality-block';
+@import './catalog/catalog';
+@import './faq/faq';
+@import './delivery/delivery';
+@import './feedback/feedback';
+@import './dialog/dialog';
+
 * {
     box-sizing: border-box;
 }
-
-// body {
-//     font-family: 'Arial', sans-serif;
-// }
 
 .MuseoSansCyrl-loaded body {
     font-family: 'MuseoSansCyrl', sans-serif;
@@ -13,10 +20,18 @@
 .container {
     width: 1280px;
     margin: 0 auto;
-}
 
-@import './template';
-@import './first-screen/first-screen';
-@import './production/production';
-@import './form-block/form-block';
-@import './catalog/catalog';
+    @include desktop {
+        width: 1024px;
+    }
+
+    @include tablet {
+        width: 728px;
+    }
+
+    @include mobile {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

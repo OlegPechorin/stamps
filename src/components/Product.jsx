@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import toggleOpen from '../decorators/toggleOpen'
-
+import {IMG_PATH_CATALOG} from '../constants'
 import {connect} from 'react-redux'
 import {toggleDialog} from '../AC'
 
@@ -23,15 +23,17 @@ class Product extends Component {
     return (
       <article className="product" ref={this.setContainerRef}>
         <div className="product__img-wrapper">
-          <img alt={product.title} className="product__img"/>
+          <img src={IMG_PATH_CATALOG + product.img} alt={product.title} className="product__img"/>
         </div>
         <div className="product__title">{product.title}</div>
         <div className="product__more" onClick = {toggleOpen}>
           {isOpen ? 'Скрыть информацию' : 'Показать информацию'}
         </div>
         {this.getDescription()}
-        <div className="product__price">{product.price}</div>
-        <button className="product__button" onClick={toggleDialog}>Заказать</button>
+        <div className="product__button-wrapper">
+          <div className="product__price">{product.price}</div>
+          <button className="product__button" onClick={toggleDialog}>Заказать</button>
+        </div>
       </article>
     )
   }

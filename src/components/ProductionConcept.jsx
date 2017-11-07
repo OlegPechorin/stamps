@@ -9,10 +9,10 @@ function ProductionConcept({productionConceptData}) {
     <div className="production-concept__title">{productionConceptData.title}</div>
     <div className="production-concept__about">
       <img className="production-concept__photo" src={IMG_PATH + productionConceptData.imgName} alt={productionConceptData.imgAlt} />
-      <div className="production-concept__text">
-        <div className="production-concept__item production-concept__item--with-line">{productionConceptData.text}</div>
-        <div className="production-concept__item">{productionConceptData.text2}</div>
-        <div className="production-concept__item production-concept__item--bold">{productionConceptData.textBold}</div>
+      <div className="production-concept__text-block">
+        <div className="production-concept__text production-concept__text--with-line">{productionConceptData.text}</div>
+        <div className="production-concept__text">{productionConceptData.text2}</div>
+        <div className="production-concept__text production-concept__text--bold">{productionConceptData.textBold}</div>
       </div>
     </div>
   </div>

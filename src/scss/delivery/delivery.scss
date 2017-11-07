@@ -1,0 +1,424 @@
+.delivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        color: $dark-gray;
+        margin-bottom: 55px;
+        @include font(700, 32px, 1);
+
+        @include tablet-desktop {
+            font-size: 26px;
+            margin-bottom: 55px;
+        }
+
+        @include mobile {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__order {
+        width: 100%;
+        background: linear-gradient(to right, #f4f4f4 30%, #ff8e1e 60%)
+    }
+
+    &__order-wrapper {
+        display: flex;
+        margin: 0 auto;
+        width: 1280px;
+
+        @include desktop {
+            width: 1024px;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            width: 728px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__types {
+        width: 100%;
+        background: linear-gradient(to right, #e4e4e4 30%, #d3d3d3 60%);
+
+        @include tablet {
+            background: #e4e4e4;
+        }
+    }
+
+    &__types-wrapper {
+        display: flex;
+        margin: 0 auto;
+        width: 1280px;
+
+        @include desktop {
+            width: 1024px;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            margin: 0;
+            width: 768px;
+        }
+
+        @include mobile {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__type {
+        width: 33.33%;
+        background-color: #e4e4e4;
+        display: flex;
+        flex-direction: column;
+        padding: 65px 85px 0 75px;
+
+        @include tablet-desktop {
+            padding: 50px 30px 0 40px;
+        }
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding: 40px;
+            align-items: center;
+        }
+
+        &:first-child {
+            @include mobile {
+                padding: 50px 40px 10px;
+            }
+        }
+
+        &--common {
+            position: relative;
+
+            &::after {
+                content: '';
+                height: 284px;
+                width: 1px;
+                background: $light-gray;
+                position: absolute;
+                right: 0;
+                top: calc(50% - 142px);
+
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+
+        &--lightning {
+            background-color: #d3d3d3;
+            background-image: url(../img/lightning.png);
+            background-repeat: no-repeat;
+            background-position: 155px 0;
+
+            @include tablet {
+                width: 100%;
+                background-position: 85% 0;
+            }
+        }
+    }
+
+    &__type-icon {
+        width: 55px;
+        height: 42px;
+        margin: 0 0 23px;
+
+        &--common {
+            background-image: url(../img/common.png);
+            background-repeat: no-repeat;
+        }
+
+        &--free {
+            background-image: url(../img/free.png);
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__type-title {
+        color: $dark-gray;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        @include font(900, 18px, 1.5);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &--lightning {
+            margin-top: 65px;
+
+            @include tablet {
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__type-text {
+        color: $dark-gray;
+        margin-bottom: 30px;
+        width: 100%;
+        @include font(300, 18px, 1.5);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &--lightning {
+            @include tablet {
+                width: 50%;
+            }
+        }
+    }
+
+    &__type-item {
+        color: $dark-gray;
+        margin-bottom: 80px;
+        width: 100%;
+        @include font(300, 18px, 1.5);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        &--bold {
+            @include font(700, 18px, 1.5);
+
+            @include tablet-desktop {
+                font-size: 16px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        &--lightning {
+            @include tablet {
+                width: 50%;
+            }
+        }
+    }
+
+    &__footer {
+        background-color: #3d3d3d;
+        width: 100%;
+    }
+
+    &__footer-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__footer-icon {
+        width: 140px;
+        height: 110px;
+        background-image: url(../img/delivery-footer.png);
+        background-repeat: no-repeat;
+        margin: 65px 35px 75px 0;
+
+        @include mobile {
+            margin: 50px 0 30px;
+        }
+    }
+
+    &__footer-text {
+        color: $white;
+        width: 490px;
+        @include font(300, 18px, 28px);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+            padding: 0 30px 40px;
+        }
+    }
+}
+
+.order-steps {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0 25px 130px;
+    background-color: #f4f4f4;
+
+    @include desktop {
+        padding: 20px 0 20px 100px;
+    }
+
+    @include tablet {
+        padding: 20px 0 20px 20px;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+    }
+
+    &__block {
+        display: flex;
+        padding: 25px 0;
+        align-items: center;
+        width: 190px;
+
+        @include tablet {
+            padding: 20px 0;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $light-gray;
+        }
+    }
+
+    &__number {
+        color: #ff8e1e;
+        margin-right: 40px;
+        @include font(100, 66px, 1);
+
+        @include tablet-desktop {
+            font-size: 52px;
+        }
+    }
+
+    &__name {
+        width: 130px;
+        color: $dark-gray;
+        @include font(500, 18px, 1);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+    }
+}
+
+.order-about {
+    width: 66.66%;
+    display: flex;
+    padding: 58px 0 0 80px;
+    background-color: #ff8e1e;
+
+    @include desktop {
+        padding: 55px 0 0 60px;
+    }
+
+    @include tablet {
+        padding: 55px 0 0 50px;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 40px 20px 0;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-right: 60px;
+
+        @include mobile {
+            margin: 0;
+        }
+    }
+
+    &__title {
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include font(900, 18px, 1);
+
+        @include tablet-desktop {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        color: $white;
+        width: 325px;
+        margin-bottom: 50px;
+        @include font(300, 18px, 28px);
+
+        @include tablet-desktop {
+            @include font(300, 16px, 24px);
+            width: 260px;
+        }
+
+        @include mobile-tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &--decoration {
+            text-decoration: underline;
+            @include font(700, 18px, 28px);
+
+            @include tablet-desktop {
+                @include font(700, 16px, 24px);
+            }
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__photo {
+        display: none;
+    }
+}

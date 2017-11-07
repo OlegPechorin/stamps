@@ -5,7 +5,7 @@ import ProductionFeatures from './ProductionFeatures'
 
 function Production() {
   return (
-    <div className="production">
+    <div className="production container">
       <ProductionList />
       <ProductionConcept />
       <ProductionFeatures />
