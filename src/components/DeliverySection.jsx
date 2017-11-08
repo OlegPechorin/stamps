@@ -31,7 +31,7 @@ function DeliverySection() {
               <div className="order-about__title">Как оплатить заказ</div>
               <div className="order-about__item">Вы можете оплатить заказ <span className="order-about__item--decoration">сразу на сайте</span> или курьеру при получении, наличными или банковской картой</div>
             </div>
-            <img className="order-about__photo" src="" alt="order-photo" />
+            <img className="order-about__photo" src="./img/box.png" alt="order-photo" />
           </div>
         </div>
       </div>

@@ -9,6 +9,8 @@ import FormDialog from './FormDialog'
 import FAQSection from './FAQSection'
 import DeliverySection from './DeliverySection'
 import Feedback from './Feedback'
+import Contacts from './Contacts'
+import Footer from './Footer'
 import '../scss/all.scss'
 import Counter from './Counter'
 import {Provider} from 'react-redux'
@@ -21,13 +23,15 @@ function App() {
         <Header />
         <FirstScreen />
         <Production />
-        <FormBlock />
+        <FormBlock imgName={'form-block-photo-1.png'}/>
         <QualityBlock />
         <Catalog />
-        <FormBlock />
+        <FormBlock imgName={'form-block-photo-2.png'}/>
         <FAQSection />
         <DeliverySection />
         <Feedback />
+        <Contacts />
+        <Footer />
 
       </div>
     </Provider>

@@ -1,0 +1,110 @@
+.main-footer {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    @include font(500, 16px, 24px);
+
+    @include desktop {
+        @include font(500, 12px, 20px);
+        padding: 50px 0;
+    }
+
+    @include tablet {
+        flex-wrap: wrap;
+        @include font(500, 12px, 20px);
+        padding: 50px 50px;
+        justify-content: space-between;
+    }
+
+    @include mobile {
+        flex-wrap: wrap;
+        @include font(500, 12px, 20px);
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    &__text {
+        width: 250px;
+        color: $light-gray;
+
+        @include mobile {
+            width: 200px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 190px;
+
+            @include desktop {
+                margin-right: 80px;
+            }
+
+            @include tablet {
+                margin: 0 0 10px;
+            }
+
+            @include mobile {
+                margin: 0 0 10px;
+            }
+
+        }
+
+        &--up {
+            @include font(500, 18px, 24px);
+            text-decoration: underline;
+            position: relative;
+            text-align: center;
+            color: $gray;
+
+            @include desktop {
+                @include font(500, 14px, 20px);
+            }
+
+            @include tablet {
+                @include font(500, 14px, 20px);
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            @include mobile {
+                @include font(500, 14px, 20px);
+                text-align: left;
+                width: 80px;
+            }
+
+            &::after {
+                content: '';
+                width: 10px;
+                height: 6px;
+                background-image: url(../img/arrow-up.png);
+                position: absolute;
+                right: 75px;
+                top: 10px;
+                background-repeat: no-repeat;
+
+                @include desktop {
+                    right: 80px;
+                    top: 8px;
+                }
+
+                @include tablet {
+                    right: -8px;
+                    top: 8px;
+                }
+
+                @include mobile {
+                    right: 10px;
+                    top: 8px;
+                }
+            }
+        }
+
+        &--produced {
+            text-decoration: underline;
+            text-align: right;
+
+            @include mobile-tablet {
+                text-align: left;
+            }
+        }
+    }
+}

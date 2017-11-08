@@ -78,14 +78,26 @@
         }
     }
 
-    &__title-photo {
-        height: 349px;
-        width: 364px;
+    &__title-photo-1 {
+        position: absolute;
+        right: 90px;
+        top: -45px;
+        width: 521px;
+        height: 451px;
 
         @include desktop {
-            width: 291px;
-            height: 280px;
+            width: 417px;
+            height: 361px;
+            right: 72px;
+            top: -35px;
         }
+
+        @include mobile-tablet {
+            display: none;
+        }
+    }
+
+    &__title-photo-2 {
 
         @include mobile-tablet {
             display: none;

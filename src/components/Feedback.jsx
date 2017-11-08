@@ -21,6 +21,7 @@ function Feedback() {
           <div className="feedback__form-sign">Воспользуйтесь формой обратной связи и мы ответим вам в течение нескольких рабочих часов</div>
         </div>
       </div>
+      <div className="feedback__bg"></div>
     </section>
   )
 }

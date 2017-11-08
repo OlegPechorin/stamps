@@ -1,8 +1,11 @@
 .feedback {
-    background: $gradient;
+    position: relative;
+    background: $gradient2;
     width: 100%;
 
     &__wrapper {
+        position: relative;
+        z-index: 2;
         display: flex;
         padding: 125px 130px 55px;
         justify-content: space-between;
@@ -229,6 +232,7 @@
     }
 
     &__form-sign {
+        position: relative;
         text-align: center;
         color: $dark-gray;
         width: 400px;
@@ -243,5 +247,29 @@
         @include mobile {
             width: 300px;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            height: 100px;
+            width: 100px;
+            background: url(../img/arrow-form.png);
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(../img/phone-big-bg.png);
+        background-repeat: no-repeat;
+        background-position: 0 80%;
+        z-index: 1;
     }
 }

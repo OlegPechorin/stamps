@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {IMG_PATH} from '../constants'
 
-function FormBlock({FormBlockData}) {
+function FormBlock({FormBlockData, imgName}) {
   return (
     <section className="form-block">
       <div className="container form-block__wrapper">
@@ -12,7 +12,11 @@ function FormBlock({FormBlockData}) {
             <div className="form-block__title-text">Восстановление печати по оттиску</div>
             <div className="form-block__title-text form-block__title-text--about">Оставьте заявку и наши профессиональные дизайнеры воспроизведут копию любой печати с точностью 99,9 %</div>
           </div>
-          <img className="form-block__title-photo" src="./img/form-block-photo.png" alt="form-block photo" />
+          <img
+            className={'form-block__title-photo-' + imgName.slice(-5, -4)}
+            src={IMG_PATH + imgName}
+            alt="form-block photo"
+          />
         </div>
         <form className="form-block__form">
           <input className="form-block__form-input" type="text" id="name" placeholder="Ваше имя" />

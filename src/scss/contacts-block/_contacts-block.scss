@@ -1,0 +1,310 @@
+.contacts-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 0;
+
+    @include tablet-desktop {
+        padding: 60px 0 0;
+    }
+
+    @include mobile {
+        padding: 40px 0 0;
+    }
+
+    &__title {
+        @include font(700, 32px, 45px);
+        color: $dark-gray;
+        margin-bottom: 40px;
+
+        @include tablet-desktop {
+            @include font(700, 25px, 30px);
+            margin-bottom: 30px;
+        }
+
+        @include mobile {
+            @include font(700, 25px, 30px);
+            margin-bottom: 30px;
+        }
+    }
+
+    &__addresses-wrapper {
+        width: 100%;
+        padding: 30px 0 50px;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+           padding: 20px 0 40px;
+        }
+
+         @include tablet {
+            padding: 20px 50px 10px;
+         }
+
+         @include mobile {
+            padding: 20px 0 10px;
+         }
+    }
+
+    &__addresses-title {
+        @include font(700, 18px, 30px);
+        color: $dark-gray;
+        margin-bottom: 40px;
+
+        @include tablet-desktop {
+            @include font(700, 14px, 24px);
+            margin-bottom: 30px;
+        }
+
+        @include mobile {
+            @include font(700, 14px, 24px);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__addresses-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        @include tablet {
+            width: 145px;
+        }
+
+        @include mobile {
+            margin-right: 0;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        &:not(:nth-child(6n+6)) {
+            @include desktop {
+                margin-right: 50px;
+            }
+
+            @media (min-width: #{1280px}) {
+                margin-right: 60px;
+            }
+        }
+
+        &:not(:nth-child(3n+3)) {
+
+            @include tablet {
+                margin-right: 100px;
+            }
+        }
+    }
+
+    &__address-text {
+       @include font(300, 16px, 26px);
+        color: $dark-gray;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        @include tablet-desktop {
+            @include font(300, 12px, 20px);
+        }
+
+        @include mobile {
+            @include font(300, 12px, 20px);
+        }
+    }
+
+    &__info {
+        display: flex;
+        padding: 50px 0 60px;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0 50px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include mobile {
+            align-items: center;
+        }
+
+        &:not(:last-child) {
+            padding-right: 75px;
+            margin-right: 75px;
+            border-right: 1px solid $light-gray;
+
+            @include tablet-desktop {
+                padding-right: 60px;
+                margin-right: 60px;
+            }
+
+            @include mobile {
+                padding: 0 0 30px;
+                margin: 0 0 30px;
+                border-right: none;
+                border-bottom: 1px solid $light-gray;
+            }
+        }
+    }
+
+    &__item-title {
+        @include font(700, 18px, 30px);
+        color: $dark-gray;
+        margin-bottom: 10px;
+
+        @include tablet-desktop  {
+            @include font(700, 14px, 24px);
+        }
+
+        @include mobile {
+            @include font(700, 14px, 24px);
+        }
+    }
+
+    &__item-text {
+        @include font(300, 16px, 24px);
+        color: $dark-gray;
+        width: 180px;
+
+        @include tablet-desktop  {
+            @include font(300, 12px, 19px);
+            width: 150px;
+        }
+
+        @include mobile {
+            @include font(300, 12px, 19px);
+            width: 135px;
+        }
+    }
+
+    &__item-email {
+        @include font(500, 18px, 32px);
+        color: #168cea;
+        margin-bottom: 10px;
+
+        @include tablet-desktop {
+            @include font(500, 14px, 25px);
+        }
+
+        @include mobile {
+            @include font(500, 14px, 25px);
+        }
+    }
+
+    &__item-phone {
+        @include font(700, 18px, 28px);
+        color: $dark-gray;
+        margin-bottom: 5px;
+
+        @include tablet-desktop {
+            @include font(700, 14px, 22px);
+        }
+
+        @include mobile {
+            @include font(700, 14px, 22px);
+        }
+    }
+
+    &__item-icons {
+        display: flex;
+
+        &--social {
+
+            @include tablet {
+                flex-wrap: wrap;
+                width: 125px;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+
+        @include tablet-desktop {
+            width: 24px;
+            height: 24px;
+        }
+
+        @include mobile {
+            width: 24px;
+            height: 24px;
+        }
+
+        &--viber {
+            background-image: url(../img/viber.png);
+            margin-right: 10px;
+        }
+
+        &--whatsapp {
+            background-image: url(../img/whatsapp.png);
+        }
+    }
+
+    &__item-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include tablet-desktop {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+        }
+
+        @include mobile {
+            width: 32px;
+            height: 32px;
+        }
+
+        &--facebook {
+            background-image: url(../img/facebook.png);
+        }
+
+        &--vk {
+            background-image: url(../img/vk.png);
+        }
+
+        &--ok {
+            background-image: url(../img/ok.png);
+        }
+
+        &--inst {
+            background-image: url(../img/inst.png);
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 400px;
+        background-image: url(../img/map.png);
+        background-size: contain;
+
+        @include mobile {
+            height: 200px;
+        }
+    }
+}
