@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 
-function Furniture() {
+function Contacts() {
   return (
-    <section className="contacts-block">
+    <section className="contacts-block x-contacts">
       <div className="contacts-block__title">Наши контакты</div>
       <div className="contacts-block__addresses-wrapper">
         <div className="contacts-block__addresses-title">Адреса магазинов:</div>
@@ -45,9 +45,8 @@ function Furniture() {
           <div className="contacts-block__item-text">Пн-пт с 10:00 до 20:00, сб-вс с 10:00 до 20:00</div>
         </div>
         <div className="contacts-block__item contacts-block__item--contacts">
-          <a className="contacts-block__item-email" href="#">msk@shtamp777.ru</a>
-          <div className="contacts-block__item-phone">+ 7 (925) 350-54-56</div>
-          <div className="contacts-block__item-phone">+ 7 (499) 391-41-22</div>
+          <a className="contacts-block__item-email" href="#">larry.glebov@gmail.com</a>
+          <div className="contacts-block__item-phone">+7 (928) 151-77-58</div>
           <div className="contacts-block__item-icons">
             <div className="contacts-block__icon contacts-block__icon--viber"></div>
             <div className="contacts-block__icon contacts-block__icon--whatsapp"></div>
@@ -68,4 +67,4 @@ function Furniture() {
   )
 }
 
-export default Furniture
+export default Contacts

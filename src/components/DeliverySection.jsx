@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 function DeliverySection() {
   return (
-    <section className="delivery">
+    <section className="delivery x-delivery">
       <div className="delivery__title">Условия доставки и оплаты</div>
       <div className="delivery__order">
         <div className="delivery__order-wrapper">

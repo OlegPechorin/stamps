@@ -13,28 +13,24 @@ import Contacts from './Contacts'
 import Footer from './Footer'
 import '../scss/all.scss'
 import Counter from './Counter'
-import {Provider} from 'react-redux'
 import './FontsLoader'
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="">
-        <Header />
-        <FirstScreen />
-        <Production />
-        <FormBlock imgName={'form-block-photo-1.png'}/>
-        <QualityBlock />
-        <Catalog />
-        <FormBlock imgName={'form-block-photo-2.png'}/>
-        <FAQSection />
-        <DeliverySection />
-        <Feedback />
-        <Contacts />
-        <Footer />
-
-      </div>
-    </Provider>
+    <div className="">
+      <Header />
+      <FirstScreen />
+      <Production />
+      <FormBlock imgName={'form-block-photo-1.png'}/>
+      <QualityBlock />
+      <Catalog />
+      <FormBlock imgName={'form-block-photo-2.png'}/>
+      <FAQSection />
+      <DeliverySection />
+      <Feedback />
+      <Contacts />
+      <Footer />
+    </div>
   )
 }
 

@@ -42,7 +42,12 @@ class ProductionList extends Component {
   handleCatalog = (id) => {
     const {toggleCatalog} = this.props
     toggleCatalog(id)
-    scrollToElement('.x-catalog')
+    if (window.innerWidth >= 768) {
+      scrollToElement('.x-catalog')
+    } else {
+      scrollToElement('.x-products-list')
+    }
+
   }
 }
 

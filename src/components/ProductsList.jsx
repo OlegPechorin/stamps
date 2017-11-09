@@ -25,7 +25,7 @@ function ProductsList({currentCatalog, products}) {
       transitionEnterTimeout={800}
       transitionLeaveTimeout={100}
     >
-      <ul key={currentCatalog.id} className="products-list container">
+      <ul key={currentCatalog.id} className="products-list container x-products-list">
         {productElements}
       </ul>
     </ReactCSSTransitionGroup>

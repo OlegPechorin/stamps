@@ -1,7 +1,8 @@
 import {
   INCREMENT,
   TOGGLE_CATALOG,
-  TOGGLE_DIALOG
+  TOGGLE_DIALOG,
+  TOGGLE_HEADER
 } from '../constants'
 
 export function increment() {

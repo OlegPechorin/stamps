@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import InputMask from 'react-input-mask'
 
 function FirstScreen({firstScreenData}) {
   return (
@@ -30,7 +31,7 @@ function FirstScreen({firstScreenData}) {
               <span className="first-screen__form-item--bold">{firstScreenData.formTextTwo}</span>
             </div>
             <input className="first-screen__form-input" type="text" id="name" placeholder="Ваше имя" />
-            <input className="first-screen__form-input" type="tel" id="call-number" placeholder="+7 (___) ___-__-__" />
+            <InputMask className="first-screen__form-input" mask="+7 (999) 999-99-99" maskChar="_" placeholder="+7 (___) ___-__-__" />
             <input type="submit" className="first-screen__form-button" value={firstScreenData.formButtonText} />
             <div className="first-screen__stock-text-wrapper first-screen__stock-text-wrapper--tablet">
               <div className="first-screen__stock-title">{firstScreenData.stockText}</div>
